@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\TraiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::name('api')->group(function() {
+
+    Route::name('trains')
+        ->prefix('trains')
+        ->group(function () {
+
+            Route::get('/' , [TraiController::class, 'index'])->name('index');
+
+           // Route::get('/trains' , [TraiController::class, 'show'])->name('show');
+
+    });
+});
+
+    
