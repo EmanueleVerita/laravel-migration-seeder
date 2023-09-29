@@ -17,7 +17,8 @@ class TraiController extends Controller
 
         return response()->json([
 
-            'trains' => $trains
+            'success' => true ,
+            'results' => $trains
 
         ]);
 
