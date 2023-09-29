@@ -13,7 +13,7 @@ class TraiController extends Controller
 
     public function index(){
 
-        $trains = Train::all();
+        $trains = Train::paginate(3);
 
         return response()->json([
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\TraiController;
+use App\Http\Controllers\Api\TrainController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +26,7 @@ Route::name('api')->group(function() {
         ->prefix('trains')
         ->group(function () {
 
-            Route::get('/' , [TraiController::class, 'index'])->name('index');
+            Route::get('/' , [TrainController::class, 'index'])->name('index');
 
            // Route::get('/trains' , [TraiController::class, 'show'])->name('show');
 
