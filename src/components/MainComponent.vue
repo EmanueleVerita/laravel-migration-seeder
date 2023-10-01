@@ -2,6 +2,7 @@
 import axios from 'axios' ;
 
 export default{
+    name: 'MainComponent' ,
     data(){
         return{
             title: 'MainComponent' ,
@@ -63,73 +64,12 @@ export default{
 </script>
 
 <template>
-    <main>
-        <div>
-            <h2>
-                {{ title }}
-            </h2>
-        </div>
-
-        <section>
-            <div>
-                <div class="trains-container">
-                    <div v-for="train in trains" :key="train.id">
-                        <h3>
-                            {{ train.title }}
-                        </h3>
-                    </div>
-                </div>
-                <div class="pagination-container">
-                    <div>
-                        <button @click="changePage('-')">
-                            &laquo; Prev
-                        </button>
-                    </div>
-                    <div>
-                        <button @click="changePage('+')">
-                            Next &raquo; 
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+   <main>
+        <router-view></router-view>
     </main>
 </template>
 
 
 <style scoped>
-    h2{
-        color: red;
-    }
-
-    .trains-container{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .trains-container > *{
-        width: calc(100% / 3);
-        border: 1px solid black;
-        padding: 10px;
-    }
-
-    .pagination-container{
-        display: flex;
-        justify-content: center;
-    }
-
-    .pagination-container button{
-        padding: 15px 25px;
-        background-color: aqua;
-        color: blue;
-        display: inline-block;
-        font-size: 20px;
-        transition: .2s ease-in-out;
-    }
-
-    .pagination-container button:hover{
-        cursor: pointer;
-        opacity: 0.6;
-    }
-
+   
 </style>

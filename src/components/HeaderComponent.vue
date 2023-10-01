@@ -13,6 +13,18 @@ export default{
         <h2>
             {{ title }}
         </h2>
+
+        <nav>
+                <ul>
+                    <li>
+                        HOme
+                    </li>
+
+                    <li>
+                        Chi Siamo
+                    </li>
+                </ul>
+            </nav>
     </header>
 </template>
 
